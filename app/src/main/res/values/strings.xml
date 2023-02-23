@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Dictionary Eng-Uzb</string>
+    <string name="search_words">Search \nWords</string>
+    <string name="search">Search</string>
+    <string name="home">Home</string>
+    <string name="select">Select</string>
+    <string name="not_found">Not Found</string>
+    <string name="save_the_word_in_favorites">Save the word in favorites</string>
+</resources>

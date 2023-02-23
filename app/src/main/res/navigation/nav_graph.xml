@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/wordFragment">
+
+    <fragment
+        android:id="@+id/wordFragment"
+        android:name="com.sultandev.dictionaryeng_uzb.presentation.ui.fragment.word.WordFragment"
+        android:label="WordFragment"
+        tools:layout="@layout/fragment_word"
+        >
+        <action
+            android:id="@+id/action_wordFragment_to_selectFragment"
+            app:destination="@id/selectFragment" />
+        <action
+            android:id="@+id/action_wordFragment_to_dialogDetail"
+            app:destination="@id/dialogDetail" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/selectFragment"
+        android:name="com.sultandev.dictionaryeng_uzb.presentation.ui.fragment.select.SelectFragment"
+        android:label="SelectFragment"
+        tools:layout="@layout/fragment_select"
+        >
+        <action
+            android:id="@+id/action_selectFragment_to_dialogDetail"
+            app:destination="@id/dialogDetail" />
+    </fragment>
+    <dialog
+        android:id="@+id/dialogDetail"
+        android:name="com.sultandev.dictionaryeng_uzb.presentation.ui.dialog.TranslateDialog"
+        android:label="DialogDetail"
+        tools:layout="@layout/dialog_translate"
+        >
+
+        <argument
+            android:name="word_item"
+            app:argType="com.sultandev.dictionaryeng_uzb.data.entity.WordEntity" />
+        <argument
+            android:name="position_dictionary"
+            app:argType="integer" />
+    </dialog>
+
+</navigation>

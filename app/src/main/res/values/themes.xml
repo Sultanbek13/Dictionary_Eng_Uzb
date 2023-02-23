@@ -1,0 +1,32 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.DictionaryEngUzb" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/app_color</item>
+        <item name="colorPrimaryVariant">@color/app_color</item>
+        <item name="colorOnPrimary">@color/app_color</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/text_color</item>
+        <item name="colorSecondaryVariant">@color/text_color</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+    </style>
+
+    <style name="TextInputLayoutStyle">
+        <item name="boxStrokeColor">@color/text_color</item>
+        <item name="boxBackgroundMode">outline</item>
+        <item name="boxBackgroundColor">@color/white</item>
+        <item name="android:textColorHint">@color/text_color</item>
+        <item name="startIconTint">@color/text_color</item>
+        <item name="endIconTint">@color/text_color</item>
+        <item name="hintTextColor">@color/text_color</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/margin_large</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/margin_large</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/margin_large</item>
+        <item name="boxCornerRadiusTopStart">@dimen/margin_large</item>
+    </style>
+
+</resources>
