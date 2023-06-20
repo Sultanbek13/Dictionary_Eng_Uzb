@@ -8,4 +8,8 @@
         android:icon="@drawable/stars"
         android:title="@string/select"
         />
+    <item android:id="@+id/aboutFragment"
+        android:icon="@drawable/about"
+        android:title="@string/about"
+        />
 </menu>

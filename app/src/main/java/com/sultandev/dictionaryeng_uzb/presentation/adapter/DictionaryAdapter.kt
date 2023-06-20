@@ -1,10 +1,17 @@
-package com.sultandev.dictionaryeng_uzb.presentation.ui.adapter
+package com.sultandev.dictionaryeng_uzb.presentation.adapter
 
 import android.annotation.SuppressLint
+import android.content.Context
 import android.database.Cursor
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import androidx.recyclerview.widget.RecyclerView
+import com.daimajia.androidanimations.library.Techniques
+import com.daimajia.androidanimations.library.YoYo
+import com.sultandev.dictionaryeng_uzb.R
 import com.sultandev.dictionaryeng_uzb.data.entity.WordEntity
 import com.sultandev.dictionaryeng_uzb.databinding.ItemWordBinding
 import com.sultandev.dictionaryeng_uzb.utils.coloredString
@@ -55,6 +62,7 @@ class DictionaryAdapter : RecyclerView.Adapter<DictionaryAdapter.WordViewHolder>
             }
 
             binding.btnSelect.setOnClickListener {
+                startAnimZoomIn(it)
                 if (data.is_favourite == 0) {
                     data.is_favourite = 1
                     setSelectImage(true, binding.btnSelect)
@@ -85,4 +93,18 @@ class DictionaryAdapter : RecyclerView.Adapter<DictionaryAdapter.WordViewHolder>
         this.notifyItemChanged(pos)
         this.cursor?.requery()
     }
+
+    private fun startAnimZoomIn(view: View) {
+        YoYo.with(Techniques.ZoomIn)
+            .delay(0)
+            .duration(500)
+            .playOn(view)
+    }
+
+    private fun setAnimation(viewToAnimate: View, context: Context) {
+        val animation: Animation =
+            AnimationUtils.loadAnimation(context, R.anim.bounce_anim)
+        viewToAnimate.startAnimation(animation)
+    }
+
 }

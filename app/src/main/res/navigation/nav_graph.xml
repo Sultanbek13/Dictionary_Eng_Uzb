@@ -7,21 +7,24 @@
 
     <fragment
         android:id="@+id/wordFragment"
-        android:name="com.sultandev.dictionaryeng_uzb.presentation.ui.fragment.word.WordFragment"
+        android:name="com.sultandev.dictionaryeng_uzb.presentation.fragments.word.WordFragment"
         android:label="WordFragment"
         tools:layout="@layout/fragment_word"
         >
         <action
             android:id="@+id/action_wordFragment_to_selectFragment"
-            app:destination="@id/selectFragment" />
+            app:destination="@id/selectFragment"
+            />
+
         <action
             android:id="@+id/action_wordFragment_to_dialogDetail"
-            app:destination="@id/dialogDetail" />
+            app:destination="@id/dialogDetail"
+            />
     </fragment>
 
     <fragment
         android:id="@+id/selectFragment"
-        android:name="com.sultandev.dictionaryeng_uzb.presentation.ui.fragment.select.SelectFragment"
+        android:name="com.sultandev.dictionaryeng_uzb.presentation.fragments.select.SelectFragment"
         android:label="SelectFragment"
         tools:layout="@layout/fragment_select"
         >
@@ -31,7 +34,7 @@
     </fragment>
     <dialog
         android:id="@+id/dialogDetail"
-        android:name="com.sultandev.dictionaryeng_uzb.presentation.ui.dialog.TranslateDialog"
+        android:name="com.sultandev.dictionaryeng_uzb.presentation.dialog.TranslateDialog"
         android:label="DialogDetail"
         tools:layout="@layout/dialog_translate"
         >
@@ -43,5 +46,11 @@
             android:name="position_dictionary"
             app:argType="integer" />
     </dialog>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.sultandev.dictionaryeng_uzb.presentation.fragments.about.AboutFragment"
+        android:label="AboutFragment"
+        tools:layout="@layout/fragment_about"
+        />
 
 </navigation>

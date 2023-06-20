@@ -1,8 +1,6 @@
-package com.sultandev.dictionaryeng_uzb.presentation.ui.fragment.word
+package com.sultandev.dictionaryeng_uzb.presentation.fragments.word
 
 import android.os.Bundle
-import android.text.Editable
-import android.util.Log
 import android.view.View
 import androidx.core.view.isVisible
 import androidx.core.widget.doOnTextChanged
@@ -12,9 +10,8 @@ import androidx.navigation.fragment.findNavController
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.sultandev.dictionaryeng_uzb.R
 import com.sultandev.dictionaryeng_uzb.databinding.FragmentWordBinding
-import com.sultandev.dictionaryeng_uzb.presentation.ui.adapter.DictionaryAdapter
-import com.sultandev.dictionaryeng_uzb.presentation.ui.fragment.word.impl.WordViewModelImpl
-import com.sultandev.dictionaryeng_uzb.utils.QuerySearch
+import com.sultandev.dictionaryeng_uzb.presentation.adapter.DictionaryAdapter
+import com.sultandev.dictionaryeng_uzb.presentation.fragments.word.impl.WordViewModelImpl
 import com.sultandev.dictionaryeng_uzb.utils.updateDictionaryListener
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -27,7 +24,9 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 class WordFragment : Fragment(R.layout.fragment_word) {
 
     private val viewModel: WordViewModelImpl by viewModel()
+
     private val adapter by lazy(LazyThreadSafetyMode.NONE) { DictionaryAdapter() }
+
     private val binding: FragmentWordBinding by viewBinding(FragmentWordBinding::bind)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -44,16 +43,9 @@ class WordFragment : Fragment(R.layout.fragment_word) {
     }
 
     private fun setObserver() {
-
         viewModel.wordsFlow.onEach {
-            if (it.count == 0) {
-                binding.llNotFound.isVisible = true
-                binding.listWords.isVisible = false
-            } else {
-                binding.llNotFound.isVisible = false
-                binding.listWords.isVisible = true
-                adapter.submitCursor(it)
-            }
+            binding.listWords.isVisible = true
+            adapter.submitCursor(it)
         }.launchIn(viewLifecycleOwner.lifecycleScope)
 
         binding.searchView.doOnTextChanged { text, _, _, _ ->

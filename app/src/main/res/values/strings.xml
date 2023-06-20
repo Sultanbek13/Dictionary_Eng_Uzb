@@ -6,4 +6,7 @@
     <string name="select">Select</string>
     <string name="not_found">Not Found</string>
     <string name="save_the_word_in_favorites">Save the word in favorites</string>
+    <string name="version_1_0">Version 1.0</string>
+    <string name="by_sultandev">by SultanDev</string>
+    <string name="about">About</string>
 </resources>

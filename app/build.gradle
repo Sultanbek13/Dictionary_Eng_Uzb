@@ -79,4 +79,10 @@ dependencies {
 
     //timber
     implementation 'com.jakewharton.timber:timber:5.0.1'
+
+    //yo-yo
+    implementation 'com.daimajia.androidanimations:library:2.4@aar'
+
+    implementation "androidx.constraintlayout:constraintlayout:2.2.0-alpha07"
+
 }

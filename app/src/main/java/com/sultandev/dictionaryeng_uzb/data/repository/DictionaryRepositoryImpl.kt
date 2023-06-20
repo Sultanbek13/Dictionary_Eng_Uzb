@@ -1,4 +1,4 @@
-package com.sultandev.dictionaryeng_uzb.domain.repository.impl
+package com.sultandev.dictionaryeng_uzb.data.repository
 
 import android.database.Cursor
 import com.sultandev.dictionaryeng_uzb.data.entity.WordEntity

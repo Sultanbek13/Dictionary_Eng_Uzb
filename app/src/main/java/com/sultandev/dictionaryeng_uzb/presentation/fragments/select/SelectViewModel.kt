@@ -1,4 +1,4 @@
-package com.sultandev.dictionaryeng_uzb.presentation.ui.fragment.select
+package com.sultandev.dictionaryeng_uzb.presentation.fragments.select
 
 import android.database.Cursor
 import com.sultandev.dictionaryeng_uzb.data.entity.WordEntity

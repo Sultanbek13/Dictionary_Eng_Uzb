@@ -1,4 +1,4 @@
-package com.sultandev.dictionaryeng_uzb.presentation.ui.fragment.select
+package com.sultandev.dictionaryeng_uzb.presentation.fragments.select
 
 import android.os.Bundle
 import android.view.View
@@ -9,9 +9,8 @@ import androidx.navigation.fragment.findNavController
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.sultandev.dictionaryeng_uzb.R
 import com.sultandev.dictionaryeng_uzb.databinding.FragmentSelectBinding
-import com.sultandev.dictionaryeng_uzb.presentation.ui.adapter.DictionaryAdapter
-import com.sultandev.dictionaryeng_uzb.presentation.ui.fragment.select.impl.SelectVIewModelImpl
-import com.sultandev.dictionaryeng_uzb.presentation.ui.fragment.word.WordFragmentDirections
+import com.sultandev.dictionaryeng_uzb.presentation.adapter.DictionaryAdapter
+import com.sultandev.dictionaryeng_uzb.presentation.fragments.select.impl.SelectVIewModelImpl
 import com.sultandev.dictionaryeng_uzb.utils.updateDictionaryListener
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach

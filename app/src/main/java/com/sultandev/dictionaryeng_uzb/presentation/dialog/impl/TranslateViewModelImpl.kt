@@ -1,10 +1,10 @@
-package com.sultandev.dictionaryeng_uzb.presentation.ui.dialog.impl
+package com.sultandev.dictionaryeng_uzb.presentation.dialog.impl
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.sultandev.dictionaryeng_uzb.data.entity.WordEntity
 import com.sultandev.dictionaryeng_uzb.domain.repository.DictionaryRepository
-import com.sultandev.dictionaryeng_uzb.presentation.ui.dialog.TranslateViewModel
+import com.sultandev.dictionaryeng_uzb.presentation.dialog.TranslateViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.launch
